@@ -41,22 +41,7 @@ public class FirstNonSmaller {
 	//This is a helper method for the Generic binarySearch 
 	//Four Paramnerts: Array, number to be found in the array, minimum index and maximum index 
 	//returns the the index if number is found and does recursion once if the number is not in mid. 
-	private static int binarySearch(int[] nums, int digit, int min, int max) {
-		int mid = (min + max) / 2;
-		if (min >= max) {
-			if (nums[mid] < digit){
-				return mid+1;
-			}
-			else {
-				return mid;
-			}
-		}
-		else if (nums[mid] >= digit) {
-			return binarySearch(nums, digit, min, mid - 1);
-		} else {
-			return binarySearch(nums, digit, mid + 1, max);
-		}
-	}
+	
 
 	//Creates a random Array to test the program 
 	public static int[] createRandomSortedArray(int size) {
